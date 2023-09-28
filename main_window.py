@@ -13,8 +13,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralwidget)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.calendarWidget = MyCalendar(parent=self.centralwidget)
-        self.calendarWidget.setStyleSheet("font: 22pt \"Southbank LT\";\n"
-"color: rgb(35, 25, 66);\n"
+        self.calendarWidget.setStyleSheet("font: 22pt \"Southbank LT\";"
 "alternate-background-color: rgb(190, 149, 196);\n"
 "selection-background-color:rgb(190, 149, 196);\n"
 "selection-color: rgb(35, 25, 66);")
@@ -27,25 +26,22 @@ class Ui_MainWindow(object):
         self.horizontalLayout_head = QtWidgets.QHBoxLayout()
         self.horizontalLayout_head.setObjectName("horizontalLayout_head")
         self.label_events = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_events.setStyleSheet("color: rgb(35, 25, 66);\n"
-"font: 16pt \"Southbank LT\";")
+        self.label_events.setStyleSheet("font: 16pt \"Southbank LT\";")
         self.label_events.setObjectName("label_events")
         self.horizontalLayout_head.addWidget(self.label_events)
         self.label_date = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_date.setStyleSheet("color: rgb(35, 25, 66);\n"
-"font: 16pt \"Southbank LT\";")
+        self.label_date.setStyleSheet("font: 16pt \"Southbank LT\";")
         self.label_date.setObjectName("label_date")
         self.horizontalLayout_head.addWidget(self.label_date)
         self.gridLayout_actions.addLayout(self.horizontalLayout_head, 0, 0, 1, 1)
         self.verticalLayout_tasks = QtWidgets.QVBoxLayout()
         self.verticalLayout_tasks.setObjectName("verticalLayout_tasks")
         self.label_tasks = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_tasks.setStyleSheet("font: 12pt \"Southbank LT\";\n"
-"color: rgb(35, 25, 66);")
+        self.label_tasks.setStyleSheet("font: 12pt \"Southbank LT\";\n")
         self.label_tasks.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.label_tasks.setObjectName("label_tasks")
         self.verticalLayout_tasks.addWidget(self.label_tasks)
-        self.table_tasks = QtWidgets.QTableView(parent=self.centralwidget)
+        self.table_tasks = QtWidgets.QTableWidget(parent=self.centralwidget)
         self.table_tasks.setStyleSheet("background-color: rgb(253, 211, 234);\n"
 "border: 1px solid rgb(94, 84, 142);\n"
 "border-radius:3px;\n"
@@ -56,8 +52,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_nametasks = QtWidgets.QVBoxLayout()
         self.verticalLayout_nametasks.setObjectName("verticalLayout_nametasks")
         self.label_nametasks = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_nametasks.setStyleSheet("font: 12pt \"Southbank LT\";\n"
-"color: rgb(35, 25, 66);")
+        self.label_nametasks.setStyleSheet("font: 12pt \"Southbank LT\";\n")
         self.label_nametasks.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.label_nametasks.setWordWrap(True)
         self.label_nametasks.setObjectName("label_nametasks")
@@ -207,8 +202,8 @@ class Ui_MainWindow(object):
         self.menuBar.addAction(self.menu_servise.menuAction())
 
         self.retranslateUi(MainWindow)
-        self.action_exit.triggered.connect(MainWindow.close) # type: ignore
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        # self.action_exit.triggered.connect(MainWindow.close) # type: ignore
+        # QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
